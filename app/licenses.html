@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="light dark" />
+<title>Easemap open-source licenses</title>
+<style>
+  :root { --bg: #ffffff; --text: #14181f; --muted: #5b6472; --link: #0f766e; --line: #d9dee5; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #0e1116; --text: #eef1f5; --muted: #9aa4b2; --link: #2dd4bf; --line: #2e3644; } }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.55 -apple-system, system-ui, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 42rem; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 28px; line-height: 1.2; } h2 { font-size: 20px; margin-top: 28px; }
+  section { border-top: 1px solid var(--line); padding-top: 4px; margin-top: 20px; }
+  .muted { color: var(--muted); } a { color: var(--link); overflow-wrap: anywhere; }
+  pre { white-space: pre-wrap; background: transparent; font: 14px/1.5 ui-monospace, Menlo, monospace; border: 1px solid var(--line); padding: 12px; border-radius: 8px; }
+</style>
+</head>
+<body>
+<main>
+<h1>Open-source licenses</h1>
+<p class="muted">Easemap includes the following software and 3D body models. Thank you to their authors.</p>
+
+<h2>Software</h2>
+
+<section>
+  <h3>three.js</h3>
+  <p>3D rendering. Version 0.180. MIT license. Copyright © 2010-2025 three.js authors. <a href="https://github.com/mrdoob/three.js/blob/dev/LICENSE" rel="noopener">License text</a></p>
+</section>
+<section>
+  <h3>Dexie.js</h3>
+  <p>IndexedDB storage. Version 4. Apache License 2.0. Copyright David Fahlander and Dexie.js contributors. <a href="https://www.apache.org/licenses/LICENSE-2.0" rel="noopener">License text</a> · <a href="https://github.com/dexie/Dexie.js" rel="noopener">Source</a></p>
+</section>
+<section>
+  <h3>uqr</h3>
+  <p>QR code generation. Version 0.1. MIT license. Copyright © Project Nayuki; Copyright © 2023 Anthony Fu. <a href="https://github.com/unjs/uqr/blob/main/LICENSE" rel="noopener">License text</a></p>
+</section>
+<section>
+  <h3>Workbox</h3>
+  <p>Offline caching (web app build only). MIT license. Copyright 2018 Google LLC. <a href="https://github.com/GoogleChrome/workbox/blob/v7/LICENSE" rel="noopener">License text</a></p>
+</section>
+
+<h2>3D body models</h2>
+<p>The model files are modified adaptations. They are distributed as a whole under CC BY-SA 2.1 JP (see the notes below).</p>
+
+<section>
+  <h3>Male body</h3>
+  <p>BodyParts3D © The Database Center for Life Science (DBCLS), licensed under Creative Commons Attribution-ShareAlike 2.1 Japan (CC BY-SA 2.1 JP). Modified: segmented, re-posed, remeshed, urethra regenerated, sub-regions defined, schematic surface relief, coccyx and perineal body added (schematic shapes by this project).</p>
+  <p>The coccyx and the perineal body of the male body are schematic shapes made by this project (approximate); no Human Reference Atlas data is in the male files. Joint regions are bands of the bone surfaces near the neighbouring bone, defined by this project (approximate). Further muscles, tendons, ligaments, discs and the pancreas are BodyParts3D parts (CC BY-SA 2.1 JP).</p>
+  <p><a href="https://lifesciencedb.jp/bp3d/" rel="noopener">Source</a> · <a href="https://creativecommons.org/licenses/by-sa/2.1/jp/" rel="noopener">License</a> · <a href="models/LICENSE-BodyParts3D.txt">Model license notice</a></p>
+</section>
+<section>
+  <h3>Female body</h3>
+  <p>Human Reference Atlas 3D Reference Object Library, HuBMAP / NIH Common Fund, licensed under Creative Commons Attribution 4.0 (CC BY 4.0) (ccf-3d-reference-object-library @ f1a3a63), derived from the NLM Visible Human Project. Modified: segmented, simplified; nipple and areola removed; schematic external genital detail (including the anal dimple) and urethra/clitoris shapes by this project; pancreas, round and uterosacral ligaments are HRA files; muscles, discs, joints and bones except pelvis and coccyx adapted from BodyParts3D (male) by a landmark warp: approximate. Model files: CC BY-SA 2.1 JP.</p>
+  <p>Muscles, bones except pelvis and coccyx, stomach and oesophagus: BodyParts3D © DBCLS, CC BY-SA 2.1 JP, adapted to the female body by a landmark warp (approximate); BodyParts3D is also the label source for the skin regions (credited above). The discs, the ligaments of the bones, the new muscles and the joint regions (bands of the bone surfaces near the neighbouring bone, defined by this project) are adapted from BodyParts3D in the same way and are approximate.</p>
+  <p><a href="https://github.com/hubmapconsortium/ccf-3d-reference-object-library" rel="noopener">Source</a> · <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener">License</a> · <a href="models/LICENSE-HRA-CC-BY-4.0.txt">Model license notice</a></p>
+</section>
+
+<h2>Anatomy names and plain-language terms</h2>
+<p>The names the app shows for body areas and structures come from a term table built from the sources below. The anatomy names have not been checked by a clinician. A name that no cited source supports is not shown as fact.</p>
+
+<section>
+  <h3>Foundational Model of Anatomy (FMA)</h3>
+  <p>Standard anatomy names and identifiers. Structural Informatics Group, University of Washington, licensed under Creative Commons Attribution (CC BY). Read through the copy distributed with BodyParts3D; an extract of the classes used is stored with the app's build tools. Names are looked up, shortened or merged for display. No endorsement is implied.</p>
+</section>
+<section>
+  <h3>NLM MedlinePlus</h3>
+  <p>Everyday words. Public-domain health information from the U.S. National Library of Medicine. The NLM does not endorse this app. <a href="https://medlineplus.gov/" rel="noopener">Source</a></p>
+</section>
+<section>
+  <h3>NCI Dictionary of Cancer Terms and NCI Thesaurus</h3>
+  <p>Everyday words. The National Cancer Institute dictionary is public domain; the NCI Thesaurus is licensed under CC BY 4.0. <a href="https://www.cancer.gov/publications/dictionaries/cancer-terms" rel="noopener">Dictionary</a> · <a href="https://evsexplore.semantics.cancer.gov/" rel="noopener">Thesaurus</a></p>
+</section>
+<section>
+  <h3>OpenStax Anatomy and Physiology 2e</h3>
+  <p>Everyday words and standard anatomical terms. Rice University / OpenStax, licensed under CC BY 4.0. OpenStax does not endorse this app. <a href="https://openstax.org/details/books/anatomy-and-physiology-2e" rel="noopener">Source</a> · <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener">License</a></p>
+</section>
+<section>
+  <h3>NHS website</h3>
+  <p>Everyday words. Contains public sector information licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="noopener">Open Government Licence v3.0</a>.</p>
+</section>
+<p class="muted">These licence summaries are the project's reading and are to be confirmed by counsel.</p>
+
+<p class="muted" style="margin-top:28px">Easemap's own application code is a separate work from the model files and is not covered by the model licenses.</p>
+</main>
+</body>
+</html>

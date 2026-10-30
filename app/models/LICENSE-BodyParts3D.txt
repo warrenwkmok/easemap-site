@@ -1,0 +1,76 @@
+BodyParts3D licence notice for public/models/body.glb and public/models/body-sensitive.glb
+=========================================================================================
+
+public/models/body.glb and public/models/body-sensitive.glb are modified adaptations of data from BodyParts3D and is licensed under
+
+    Creative Commons Attribution-ShareAlike 2.1 Japan (CC BY-SA 2.1 JP)
+
+This licence applies to body.glb and body-sensitive.glb (and any further adaptation of them) ONLY. the Easemap application
+source code is a separate work that loads the file at run time; it is not an adaptation of the
+model and is not covered by this licence (see ATTRIBUTION.md in the repository root).
+
+Required credit
+---------------
+    BodyParts3D, (c) The Database Center for Life Science, licensed under
+    CC Attribution-Share Alike 2.1 Japan.
+
+Please also cite:
+    Mitsuhashi N, Fujieda K, Tamura T, Kawamoto S, Takagi T, Okubo K.
+    BodyParts3D: 3D structure database for anatomical concepts.
+    Nucleic Acids Res. 2009 Jan;37(Database issue):D782-5. doi:10.1093/nar/gkn613
+    Data archive DOI: 10.18908/lsdba.nbdc00837-000  (https://doi.org/10.18908/lsdba.nbdc00837-000)
+
+Changes made (CC BY-SA requires indicating them)
+------------------------------------------------
+Source: BodyParts3D v3.0 (20110915), as converted from OBJ to binary STL and mirrored at
+https://github.com/Kevin-Mattheus-Moerman/BodyParts3D (commit f0eeb6e843380cfe6b83797cf8c3e1af74de5e61).
+Our changes to that data:
+  * converted: STL -> glTF 2.0 binary (GLB), positions only, vertex normals computed at load;
+  * transformed: vertices welded, rotated into a Y-up, metre-scale frame and recentred on the skin;
+  * segmented: the skin surface was reduced to its outer shell (internal shells removed) and divided
+    into named body regions (head, neck, chest, ... and, by anatomical anchors, the perineum, anal area,
+    groin, buttocks, penis shaft, glans and scrotum); individual muscle, bone and organ parts were merged
+    into region meshes; many parts (deep muscles, ligaments, teeth, pancreas, ...) were omitted;
+  * re-posed: the whole body was rotated from the source standing pose into an A-pose (arms and legs
+    rotated about the shoulder and hip joints, with blended skin weights);
+  * generated: a smoothed genital proxy surface (no anatomical detail) from the source skin patch;
+  * split: sensitive regions were written to a separate file, body-sensitive.glb;
+  * decimated: meshes were simplified (meshoptimizer) to about 415,000 triangles in total.
+The upstream converter's own changes (OBJ -> STL, file selection) are described in the upstream
+README at the commit above.
+
+Upstream licence notice (verbatim, from LICENSE_content at the pinned commit above,
+sha256 0e26340c8fadac4a0478d23dd12f4cb20b4043c436d0ab95eacb062391a7ec84)
+------------------------------------------------------------------------
+Summary: Creative Commons License Creative Commons Attribution-Inheritance 2.1 Japan (CC BY-SA)
+
+Original: http://lifesciencedb.jp/bp3d/info_en/license/index.html
+
+Translation: https://creativecommons.org/licenses/by-sa/2.1/jp/deed.en
+
+About terms of use and credit description:
+The standard licenses for the contents (including images created by Anatomography) published on this site (http://lifesciencedb.jp/bp3d, http://lifesciencedb.jp/ag) are as follows.
+
+Creative Commons License Creative Commons Attribution-Inheritance 2.1 Japan
+
+Please be sure to display the following credits before using.
+
+BodyParts3D, Copyrightc 2008 Life Science Integrated Database Center licensed by CC Display-Inheritance 2.1 Japan
+
+Plain-language summary (informational, not legal advice; the licence text governs)
+---------------------------------------------------------------------------------
+You may copy, redistribute, display and adapt the work, including commercially, provided that you
+  1. give the credit shown above and a link to the licence,
+  2. indicate that you changed it, and
+  3. distribute any adaptation of the work under the same licence (ShareAlike): CC BY-SA 2.1 JP, or a
+     compatible licence the CC licence allows.
+The work comes without warranty.
+
+Authoritative licence texts
+---------------------------
+  Deed (summary):  https://creativecommons.org/licenses/by-sa/2.1/jp/deed.en
+  Legal code (JP): https://creativecommons.org/licenses/by-sa/2.1/jp/legalcode
+  BodyParts3D licence page: http://lifesciencedb.jp/bp3d/info_en/license/index.html
+                            http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+The full legal code is incorporated by reference through the links above; it was not reproduced
+here because only the upstream mirror's own licence notice was available to the build environment.
